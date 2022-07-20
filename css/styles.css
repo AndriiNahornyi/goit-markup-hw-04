@@ -103,7 +103,7 @@ body {
 }
 
 .contacts .item + .item {
-    margin-left: 50px;
+    margin-left: 30px;
 }
 
 .contacts .contacts-item {
@@ -125,10 +125,11 @@ body {
 }
 
 .contacts-icon {
-    fill: currentColor;
     margin-right: 10px ; 
-    width: 16px;
-    height: 12px;
+    /* width: 16px;
+    height: 12px; */
+
+    fill: currentColor;
 }
 
 /* Герой */
@@ -220,9 +221,8 @@ body {
 }
 
 .specialty .item {
-    width: 270px; 
     margin-right: 30px;
-    background-color: tomato;
+    width: 270px;
 }
 
 .specialty .item:nth-child(4n) {
@@ -235,13 +235,16 @@ body {
     height: 120px;
     align-items: center; 
     justify-content: center;
-    background-color: yellowgreen
+
+    background-color: #F5F4FA;
+
+    border-radius: 4px;
 }
 
-.icon-features .icon-symbol {
-    display: flex;
-    width: 70px;
-    height: 70px;
+.icon-specialty {
+    fill: ;
+    /* width: 70px;
+    height: 70px; */
 }
 
 .specialty .title {
@@ -255,8 +258,7 @@ body {
 }
 
 .specialty .text { 
-    margin-top: 0;
-    margin-bottom: 0;
+    margin:0;
 } 
 
 /* Чим ми займаємось */
@@ -317,8 +319,14 @@ body {
     width: 270px; 
     margin-right: 30px;
     padding-bottom: 30px;
+   
 
     border-radius: 0 0 4px 4px;
+
+    background-color: #ffffff;
+    /* --background-color: #ffffff;
+    background-color: var(--background-color); */
+    
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.14), 0 2px 1px rgba(0, 0, 0, 0.2);
 }
 
@@ -343,11 +351,52 @@ body {
 }
 
 .position {
-    margin: 0; 
+    margin-top: 0;
+    margin-bottom: 16px; 
        
     font-size: 16px;
     line-height: 1.19;
     text-align: center;
+}
+
+.team .social-list {
+    display: flex;
+    justify-content: center;
+}
+
+.team .social-item {
+    margin-right: 10px; 
+} 
+
+.team .social-item:last-child {
+    margin-right: 0;
+} 
+
+.team .social-link {
+    display: inline-flex;
+    width: 44px;
+    height: 44px;
+    
+    justify-content: center;
+    align-items: center;   
+
+    color: #AFB1B8;
+    border-radius: 50%;
+    
+    text-decoration: none;
+}
+
+.team .icon-symbol {
+    color: #AFB1B8;
+    background-color: #ffffff;
+    /* width: 20px;
+    height: 20px; */
+}
+
+.team .social-link:hover,
+.team .social-link:focus {
+    color: #ffffff;
+    background-color: #2196f3;
 }
 
 /* Посітйні клієнти */ 
@@ -361,9 +410,7 @@ body {
 }
 
 .client-item {
-   display: flex;
     margin-right: 30px;
-    background-color: aqua;
 } 
 
 .client-item:nth-child(6n) {
@@ -374,22 +421,27 @@ body {
     display: inline-flex;
     width: 170px;
     height: 92px;
-    background-color: tomato;
-    text-decoration: none;
-
     align-items: center;
     justify-content: center;
+
+    color: #AFB1B8;
+
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;  /* ? */
+
+    text-decoration: none;
 }
 
 .client-link:hover,
 .client-link:focus {
-    --primary-text-color: var(--accent-color);
+    --primary-text-color: #2196f3;
     color: var(--primary-text-color);
 }
 
-.client-link .icon-symbol {
-    width: 106px;
-    height: 60px;
+.icon-clients {
+    fill: currentColor;
+    /* width: 106px;
+    height: 60px; */
 }
 
 /* Сторінка Портфоліо */
@@ -516,7 +568,7 @@ body {
 .footer-items {
     display: flex;
     align-items: baseline;
-    background-color: tomato;
+    /* background-color: tomato; */
 }
 
 /* .address {
@@ -573,7 +625,6 @@ body {
 }
 
 .social-footer {
-    background-color: #2196f3;
     margin-left: 70px;
 }
 
@@ -582,7 +633,6 @@ body {
     margin-top: 0;
     margin-bottom: 20px;
 
-background-color: green;
     --primary-text-color: var(--white-text-color);
     color: var(--primary-text-color);
     font-weight: 700;
@@ -591,30 +641,39 @@ background-color: green;
     text-align: left;
 }
 
-.social-list {
-   display: flex;
-   background-color: grey;
-}
+.social-footer .social-list {
+    display: flex;
 
-.social-item {
-    margin-left: 0;
+}
+.social-footer .social-item {
     margin-right: 10px;
-} 
 
-.social-item:last-child {
+}
+.social-footer .social-item:last-child {
     margin-right: 0;
-}
 
-.social-link {
-    text-decoration: none;
-    justify-content: center;
-    align-items: center;
 }
-
-.social-link .icon-symbol {
+.social-footer .social-link {
+    display: inline-flex;
     width: 44px;
     height: 44px;
-    
+
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+
+    text-decoration: none;
 }
 
+.social-footer .social-link:hover,
+.social-footer .social-link:focus {
+    background-color: #2196f3;
+}
 
+.social-footer .icon-symbol {
+    fill: #ffffff;
+    /* width: 20px;
+    height: 20px; */
+}
